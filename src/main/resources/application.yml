@@ -1,0 +1,27 @@
+server:
+  forward-headers-strategy: framework
+  port: 6000
+
+spring:
+  application:
+    name: Socializa-Ung
+
+  servlet:
+    multipart:
+      max-file-size: 8MB
+      max-request-size: 8MB
+  jackson:
+    deserialization:
+      fail-on-unknown-properties: false
+  main:
+    allow-bean-definition-overriding: true
+  data:
+    rest:
+      default-page-size: 30
+    mongodb:
+      host: localhost
+      port: 27017
+      database: socializaung
+      username: admin
+      password: secret
+      authentication-database: admin
